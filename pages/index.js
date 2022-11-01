@@ -43,7 +43,6 @@ const Container = styled.div`
 `
 
 export default function Home({ menu }) {
-  console.log('Menu', menu.fields.menuLogo.fields.file.details.image.width)
   return (
     <Container>
       <Head>
@@ -68,7 +67,7 @@ export default function Home({ menu }) {
           <Navbar
             logo={menu.fields.menuLogo.fields}
             menuItems={menu.fields.menuItems}
-            closeOption={() => {console.log('Changing Page')}}
+            showCloseButton={false}
           />
         </div>
         <Menu menuItems={menu.fields.menuItems} />

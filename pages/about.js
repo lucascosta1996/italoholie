@@ -66,10 +66,7 @@ const CategoryWrapper = styled.div`
 `
 
 function About({ menu, about }) {
-    const router = useRouter()
     const [ mobileMenu, setMobileMenu ] = useState(false)
-    console.log('MENU', menu)
-    console.log('ABOUT', about)
 
     return (
         <CategoryWrapper>
@@ -88,6 +85,7 @@ function About({ menu, about }) {
                     menuItems={menu?.items[0].fields.menuItems}
                     startBigLogo={true}
                     closeOption={() => setMobileMenu(false)}
+                    showCloseButton={true}
                 />
             </div>
             <AboutContent content={about} />

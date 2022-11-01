@@ -81,9 +81,9 @@ const NavbarWrapper = styled.nav`
     }
 `
 
-function Navbar({ logo, menuItems, startBigLogo, closeOption }) {
+function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton }) {
     const [ smallLogo, setSmallLogo ] = useState(startBigLogo);
-
+    console.log('closeOption', closeOption)
     useEffect( () => {
         setTimeout( () => {
             setSmallLogo(true)
@@ -138,7 +138,7 @@ function Navbar({ logo, menuItems, startBigLogo, closeOption }) {
                     </Link>
                 </li>
             </ul>
-            {closeOption ? (
+            {showCloseButton ? (
                 <span
                     className="close-button"
                     onClick={() => closeOption()}

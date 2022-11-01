@@ -50,6 +50,7 @@ function Category({ menu, artworks }) {
                     menuItems={menu.items[0].fields.menuItems}
                     startBigLogo={true}
                     closeOption={() => setMobileMenu(false)}
+                    showCloseButton={true}
                 />
             </div>
             <ContentList content={activeCategory} />
