@@ -25,6 +25,7 @@ function ContentItem({ content }) {
                             setCarouselVisibility(true);
                             setSlidePosition(index)
                         }}
+                        key={`https:${artworkImage.fields.file.url}`}
                     >
                         <Image
                             src={`https:${artworkImage.fields.file.url}`}

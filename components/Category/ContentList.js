@@ -22,17 +22,22 @@ function ContentList({ content }) {
             </header>
             <div className={styles.categoryDescription}>{selectedArtwork ? documentToReactComponents(selectedArtwork.fields.artworkDescription) : documentToReactComponents(sectionDescription)}</div>
             {!selectedArtwork && artworks?.length > 0 ? (
-                <ul className={styles.artworksList}>
+                <ul
+                    className={styles.artworksList}
+                >
                     {artworks.map(a => {
                         const ROUTE_NAME = a.fields.artworkTitle.toLowerCase().replace(' ', '-')
                         return (
-                            <Link href={{
-                                pathname: '/[category]/[artwork]',
-                                query: {
-                                    artwork: ROUTE_NAME,
-                                    category: router.query.category
-                                }
-                            }}>
+                            <Link
+                                href={{
+                                    pathname: '/[category]/[artwork]',
+                                    query: {
+                                        artwork: ROUTE_NAME,
+                                        category: router.query.category
+                                    }
+                                }}
+                                key={`https:${a.fields.artworkImages[0].fields.file.url}`}
+                            >
                                 <li
                                     className={styles.artworksListItem}
                                     onClick={() => setSelectedWork(a)}

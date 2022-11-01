@@ -10,7 +10,10 @@ function AboutContent({ content }) {
         >
             <section className={styles.artistPictures}>
                 {content.items[0].fields.artistPictures.map(pic => (
-                    <div className={styles.picture}>
+                    <div 
+                        className={styles.picture}
+                        key={`https:${pic.fields.file.url}`}
+                    >
                         <Image
                             src={`https:${pic.fields.file.url}`}
                             alt=""

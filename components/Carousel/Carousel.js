@@ -23,7 +23,9 @@ function Carousel({ images, close, initialSlide }) {
                 onSlideChange={() => console.log('slide change')}
             >
                 {images.map(image => (
-                    <SwiperSlide>
+                    <SwiperSlide
+                        key={`https:${image.fields.file.url}`}
+                    >
                         <div
                             className={styles.imageSlide}
                         >
