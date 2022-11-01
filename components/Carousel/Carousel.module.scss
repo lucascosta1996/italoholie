@@ -1,0 +1,65 @@
+.carousel {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    left: 0;
+    top: 0;
+
+    .imageSlide {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        max-height: 100vh;
+
+        > div {
+            position: unset !important;
+        }
+
+        .carouselImage {
+            object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
+    }
+
+    .closeButton {
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        z-index: 5;
+
+        @media (max-width: 912px) {
+            right: 20px;
+        }
+    }
+
+    .swiper-button-prev {
+        color: #fff;
+        left: 45px;
+
+        @media (max-width: 912px) {
+            left: 10px;
+            opacity: 0.6;
+        }
+    }
+
+    .swiper-button-next {
+        color: #fff;
+        right: 45px;
+
+        @media (max-width: 912px) {
+            right: 10px;
+            opacity: 0.6;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+}

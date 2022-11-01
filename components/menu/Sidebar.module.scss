@@ -1,0 +1,46 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @media (min-width: 768px) {
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+
+    @media (max-width: 768px) {
+        position: absolute;
+        left: 50px;
+    }
+
+    @media (max-width: 912px) {
+        display: none;
+    }
+
+    .logoContainer {
+        width: 180px;
+    }
+
+    .menuItems {
+        padding-left: 0;
+
+        .active {
+            opacity: 0.6;
+        }
+
+        li {
+            cursor: pointer;
+            font-size: 13px;
+            list-style: none;
+            padding: 8px 0;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}

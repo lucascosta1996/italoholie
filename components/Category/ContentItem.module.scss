@@ -1,0 +1,70 @@
+.contentItem {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    width: 840px;
+
+    .artworkImagesList {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 912px) {
+            flex-direction: column;
+        }
+    }
+
+    .artworkImage {
+        max-width: 400px;
+        width: 100%;
+        cursor: nwse-resize;
+        margin: 10px;
+
+        @media (max-width: 912px) {
+            max-width: 95%;
+            margin: 10px auto;
+        }
+    }
+
+    .contentItemHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        @media (max-width: 912px) {
+            flex-direction: column;
+            max-width: 95%;
+            margin: auto;
+            align-items: flex-start;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 22px;
+            margin-bottom: 0;
+            letter-spacing: 0.6px;  
+        }
+
+        small {
+            font-size: 12px;
+            opacity: 0.6;
+            padding-left: 5px;
+
+            @media (max-width: 912px) {
+                padding-top: 5px;
+                padding-left: 0;
+            }
+        }
+    }
+
+    .artworkDescription {
+        font-size: 12px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+
+        @media (max-width: 912px) {
+            max-width: 300px;
+            margin-left: 10px;
+        }
+    }
+}

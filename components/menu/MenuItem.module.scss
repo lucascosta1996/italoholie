@@ -1,0 +1,53 @@
+.menuItem {
+    position: relative;
+    cursor: pointer;
+    flex: 1;
+    list-style: none;
+    height: 100vh;
+    transition: all ease 1s;
+
+    .grow {
+        flex-grow: 10;
+    }
+
+    header {
+        margin: 20px;
+        max-height: 418px;
+        transition: all ease 1s;
+
+        .none {
+            display: none;
+        }
+
+        > div {
+            position: unset !important;
+        }
+
+        .image {
+            object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
+    }
+}
+
+.desktopTitle {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #FFF;
+    display: flex;
+    flex-wrap: no-wrap;
+    font-family: 'Inter Tight', sans-serif;
+    transition: all ease 1s;
+
+    div {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        transition: all ease 1s;
+    }
+}

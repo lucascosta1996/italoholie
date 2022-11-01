@@ -1,0 +1,102 @@
+.contentList {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 840px;
+
+    .categoryDescription {
+        font-size: 12px;
+
+        @media (max-width: 912px) {
+            font-size: 11px;
+        }
+    }
+
+    .contentListHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        @media (max-width: 912px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 22px;
+            margin-bottom: 0;
+            letter-spacing: 0.6px;  
+        }
+
+        small {
+            font-size: 12px;
+            opacity: 0.6;
+            padding-left: 5px;
+
+            @media (max-width: 912px) {
+                padding-left: 0;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .artworksList {
+        padding-left: 0;
+        padding-top: 20px;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .artworksListItem {
+        cursor: pointer;
+        margin-bottom: 60px;
+    }
+
+    .artworkInfo {
+        background-color: #000;
+        position: absolute;
+        right: -155px;
+        bottom: 5px;
+        padding: 10px;
+        min-width: 172px;
+        font-size: 12px;
+        max-width: 200px;
+
+        p {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        @media (max-width: 912px) {
+            right: -88px;
+        }
+
+        button {
+            opacity: 0.7;
+        }
+    }
+
+    .imageWrapper {
+        position: relative;
+        max-width: 400px;
+    }
+
+    .learnMore {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding-left: 0;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .title {
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
