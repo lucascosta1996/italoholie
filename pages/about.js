@@ -4,7 +4,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../components/menu/Navbar'
 import Sidebar from '../components/menu/Sidebar'
-import MenuIcon from '../components/MenuIcon/MenuIcon'
+import MenuIcon from '../components/menuIcon/MenuIcon'
 import AboutContent from '../components/About/About'
 
 export async function getServerSideProps() {

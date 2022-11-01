@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import ContentItem from '../../components/Category/ContentItem'
 import Sidebar from '../../components/menu/Sidebar'
-import MenuIcon from '../../components/MenuIcon/MenuIcon'
 
 export async function getServerSideProps() {
     const client = createClient({
