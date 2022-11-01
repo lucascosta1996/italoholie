@@ -4,7 +4,7 @@ import { useState } from 'react'
 import ContentList from '../../components/Category/ContentList'
 import Navbar from '../../components/menu/Navbar'
 import Sidebar from '../../components/menu/Sidebar'
-import MenuIcon from '../../components/MenuIcon/MenuIcon'
+import MenuIcon from '../../components/menuIcon/MenuIcon'
 import styles from '../../styles/Category.module.scss'
 
 export async function getServerSideProps() {
