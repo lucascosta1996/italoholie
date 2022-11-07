@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 const ListItem = styled.li`
     position: relative;
-    background-color: ${props => props.background};
     cursor: pointer;
     flex: 1;
     list-style: none;
@@ -14,7 +13,7 @@ const ListItem = styled.li`
     transition: all ease 1s;
 
     header {
-        ${props => !props.isMenuOpen && 'display: none;'}
+        /* ${props => !props.isMenuOpen && 'display: none;'} */
         margin: 20px;
         max-height: 418px;
         transition: all ease 1s;
@@ -24,10 +23,16 @@ const ListItem = styled.li`
         }
 
         .image {
-            object-fit: contain;
+            object-fit: cover;
             width: 100% !important;
             position: relative !important;
             height: unset !important;
+            filter: grayscale();
+            opacity: 0.2;
+            ${props => props.isMenuOpen && 'filter: none;'}
+            ${props => props.isMenuOpen && 'opacity: 1;'}
+            ${props => props.isMenuOpen && 'object-fit: contain;'}
+            transition: all ease 1s;
         }
     }
 `

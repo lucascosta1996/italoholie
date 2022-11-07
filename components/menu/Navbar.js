@@ -24,7 +24,7 @@ const NavbarWrapper = styled.nav`
         left: 0;
         flex-direction: column;
         justify-content: center;
-        overflow-y:auto;
+        overflow: hidden;
         height:100%;
     }
 
@@ -79,11 +79,46 @@ const NavbarWrapper = styled.nav`
             display: none;
         }
     }
+
+    .mobile-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100vh;
+        width: 170%;
+        filter: grayscale(1);
+        opacity: 0.2;
+
+        @media (min-width: 912px) {
+            display: none;
+        }
+    }
+
+    .mobile-icons {
+        @media (min-width: 912px) {
+            display: none;
+        }
+
+        display: flex;
+
+        a {
+            margin: 0px 20px;
+        }
+    }
+
+    .desktop-icon {
+        @media (max-width: 912px) {
+            display: none;
+        }
+    }
 `
 
-function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton }) {
+function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton, mobileSlideshow, background }) {
     const [ smallLogo, setSmallLogo ] = useState(startBigLogo);
     console.log('closeOption', closeOption)
+    console.log('menuItems', menuItems)
+    console.log('background', background)
     useEffect( () => {
         setTimeout( () => {
             setSmallLogo(true)
@@ -105,9 +140,30 @@ function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton })
               />
             </div>
             <ul className='menu-items'>
-                <li>
+                <li className='mobile-icons'>
                     <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
                         <i class="fa fa-instagram" styles={{fontSize: '46px'}}></i>
+                    </a>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-facebook-official" styles={{fontSize: '46px'}}></i>
+                    </a>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-youtube-play" styles={{fontSize: '46px'}}></i>
+                    </a>
+                </li>
+                <li className='desktop-icon'>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-instagram" styles={{fontSize: '46px'}}></i>
+                    </a>
+                </li>
+                <li className='desktop-icon'>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-facebook-official" styles={{fontSize: '46px'}}></i>
+                    </a>
+                </li>
+                <li className='desktop-icon'>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-youtube-play" styles={{fontSize: '46px'}}></i>
                     </a>
                 </li>
                 {menuItems.map((menuItem) => {
@@ -138,6 +194,16 @@ function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton })
                     </Link>
                 </li>
             </ul>
+            <div className='mobile-background'>
+                <Image
+                    src={`https:${background.fields.file.url}`}
+                    alt="Picture of the author"
+                    height={background.fields.file.details.image.height}
+                    width={background.fields.file.details.image.width}
+                    layout="responsive"
+                    priority
+                />
+            </div>
             {showCloseButton ? (
                 <span
                     className="close-button"

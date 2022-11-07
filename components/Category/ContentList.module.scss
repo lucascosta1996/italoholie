@@ -71,7 +71,8 @@
         }
 
         @media (max-width: 912px) {
-            right: -88px;
+            right: -16px;
+            bottom: -38px;
         }
 
         button {
@@ -81,7 +82,7 @@
 
     .imageWrapper {
         position: relative;
-        max-width: 400px;
+        max-width: 95%;
     }
 
     .learnMore {

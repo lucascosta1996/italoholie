@@ -61,6 +61,8 @@ export default function Home({ menu }) {
             menuItems={menu.fields.menuItems}
             startBigLogo
             closeOption={() => {console.log('Changing Page')}}
+            mobileSlideshow={true}
+            background={menu.fields.mobileBackground}
           />
         </div>
         <div className="desktop-wrapper">
@@ -68,6 +70,7 @@ export default function Home({ menu }) {
             logo={menu.fields.menuLogo.fields}
             menuItems={menu.fields.menuItems}
             showCloseButton={false}
+            background={menu.fields.mobileBackground}
           />
         </div>
         <Menu menuItems={menu.fields.menuItems} />

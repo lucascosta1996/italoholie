@@ -1,6 +1,7 @@
 .category {
     display: flex;
     padding-left: 230px;
+    overflow-x: hidden;
 
     @media (max-width: 912px) {
         padding-left: 10px;

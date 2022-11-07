@@ -86,6 +86,7 @@ function About({ menu, about }) {
                     startBigLogo={true}
                     closeOption={() => setMobileMenu(false)}
                     showCloseButton={true}
+                    background={menu?.items[0].fields.mobileBackground}
                 />
             </div>
             <AboutContent content={about} />

@@ -26,6 +26,7 @@ export async function getServerSideProps() {
 const ArtworkWrapper = styled.div`
     display: flex;
     padding-left: 230px;
+    overflow-x: hidden;
 
     @media (max-width: 912px) {
         padding-left: 0;

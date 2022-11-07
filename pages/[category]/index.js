@@ -1,4 +1,5 @@
 import { createClient } from 'contentful'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import ContentList from '../../components/Category/ContentList'
@@ -35,6 +36,9 @@ function Category({ menu, artworks }) {
     ))
     return (
         <div className={styles.category}>
+            <Head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            </Head>
             <div className={styles.menuIcon}>
                 <MenuIcon
                     onClick={() => setMobileMenu(true)}
@@ -51,6 +55,7 @@ function Category({ menu, artworks }) {
                     startBigLogo={true}
                     closeOption={() => setMobileMenu(false)}
                     showCloseButton={true}
+                    background={menu.items[0].fields.mobileBackground}
                 />
             </div>
             <ContentList content={activeCategory} />
