@@ -42,5 +42,20 @@
                 opacity: 0.6;
             }
         }
+        
+        .icons {
+            display: flex;
+            &:hover {
+                opacity: 1;
+            }
+
+            a {
+                padding-right: 10px;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
     }
 }

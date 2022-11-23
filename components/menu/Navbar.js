@@ -10,12 +10,12 @@ const NavbarWrapper = styled.nav`
     align-items: center;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 600;
-    ${props => props.smallLogo ? 'top: 15px' : 'top: 0'};
-    ${props => props.smallLogo ? 'left: 15px' : 'left: 0'};
+    top: 15px;
+    left: 15px;
     width: 100%;
     z-index: 2;
-    ${props => props.smallLogo ? 'background-color: transparent' : 'background-color: #000'};
-    ${props => props.smallLogo ? 'height; auto' : 'height: 100vh'};
+    background-color: transparent;
+    height: auto;
     transition: all ease 0.2s;
 
     @media (max-width: 912px) {
@@ -29,14 +29,14 @@ const NavbarWrapper = styled.nav`
     }
 
     .logo-container {
-        ${props => props.smallLogo ? 'width: 250px' : 'width: 100%'};
-        ${props => props.smallLogo ? 'margin: 0' : 'margin: 0 auto'};
+        width: 250px;
+        margin: 0;
         transition: all ease 0.6s;
 
     }
 
     .menu-items {
-        ${props => props.smallLogo ? 'display: flex' : 'display: none'};
+        display: flex;
         list-style: none;
         padding-left: 0;
         padding-right: 30px;
@@ -114,21 +114,10 @@ const NavbarWrapper = styled.nav`
     }
 `
 
-function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton, mobileSlideshow, background }) {
-    const [ smallLogo, setSmallLogo ] = useState(startBigLogo);
-    console.log('closeOption', closeOption)
-    console.log('menuItems', menuItems)
-    console.log('background', background)
-    useEffect( () => {
-        setTimeout( () => {
-            setSmallLogo(true)
-        }, 3000 )
-    }, []);
+function Navbar({ logo, menuItems, closeOption, showCloseButton, mobileSlideshow, background }) {
 
     return (
-        <NavbarWrapper
-            smallLogo={smallLogo}
-        >
+        <NavbarWrapper>
             <div className='logo-container'>
               <Image
                   src={`https:${logo.file.url}`}
@@ -191,6 +180,24 @@ function Navbar({ logo, menuItems, startBigLogo, closeOption, showCloseButton, m
                         href="/about"
                     >
                         about
+                    </Link>
+                </li>
+                <li
+                    onClick={() => closeOption()}
+                >
+                    <Link
+                        href="/contact"
+                    >
+                        Contact
+                    </Link>
+                </li>
+                <li
+                    onClick={() => closeOption()}
+                >
+                    <Link
+                        href="/booking"
+                    >
+                        Booking
                     </Link>
                 </li>
             </ul>

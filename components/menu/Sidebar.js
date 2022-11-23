@@ -46,6 +46,35 @@ function Sidebar({ logo, menuItems }) {
                         About
                     </Link>
                 </li>
+                <li
+                    className={router.asPath === "/contact" ? `${styles.active}` : ''}
+                >
+                    <Link
+                        href="/contact"
+                    >
+                        Contact
+                    </Link>
+                </li>
+                <li
+                    className={router.asPath === "/booking" ? `${styles.active}` : ''}
+                >
+                    <Link
+                        href="/booking"
+                    >
+                        Booking
+                    </Link>
+                </li>
+                <li className={styles.icons}>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-instagram" styles={{fontSize: '46px'}}></i>
+                    </a>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-facebook-official" styles={{fontSize: '46px'}}></i>
+                    </a>
+                    <a href="https://www.instagram.com/italoholietattoo/" target="__blank">
+                        <i class="fa fa-youtube-play" styles={{fontSize: '46px'}}></i>
+                    </a>
+                </li>
             </ul>
         </div>
     )

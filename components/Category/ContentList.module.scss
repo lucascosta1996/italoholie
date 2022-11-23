@@ -82,7 +82,11 @@
 
     .imageWrapper {
         position: relative;
-        max-width: 95%;
+        max-width: 500px;
+        
+        @media (max-width: 912px) {
+            max-width: 95%;
+        }
     }
 
     .learnMore {

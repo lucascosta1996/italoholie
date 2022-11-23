@@ -71,6 +71,7 @@ export default function Home({ menu }) {
             menuItems={menu.fields.menuItems}
             showCloseButton={false}
             background={menu.fields.mobileBackground}
+            closeOption={() => {console.log('Changing Page')}}
           />
         </div>
         <Menu menuItems={menu.fields.menuItems} />
