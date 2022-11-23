@@ -160,31 +160,10 @@ const Container = styled.div`
 `
 
 function Booking({ menu }) {
-  const { register, formState: { errors }, handleSubmit } = useForm()
   const [ mobileMenu, setMobileMenu ] = useState(false)
   const [ messageSent, setMessageSent ] = useState(false)
   const [ sendingMessage, setSendindMessage ] = useState(false)
-  const [ time, setTime ] = useState('')
   const form = useRef()
-
-  const sendEmail = (data) => {
-    setSendindMessage(true)
-    emailjs.sendForm('service_5galvs3', 'template_tw3gsss', form.current, '95JGIKMz9yYdxGWCV')
-      .then((result) => {
-            setMessageSent(true)
-            console.log(result.text)
-      }, (error) => {
-          console.log(error.text)
-      })
-  }
-
-  const okButtonLocalizedLabel = {
-    'en-US': 'OK'
-  }
-
-  const cancelButtonLocalizedLabel = {
-    'en-US': 'Cancel'
-  }
   
   return (
     <CategoryWrapper>
@@ -213,7 +192,7 @@ function Booking({ menu }) {
         <Container>
             <div className="make-contact">
                 <h2>Make an appointment</h2>
-                <p>I'll be back in touch as soon as possible.</p>
+                <p>{`I'll be back in touch as soon as possible.`}</p>
             </div>
             {messageSent ? (
                 <FormWrapper>Thank you!</FormWrapper>
