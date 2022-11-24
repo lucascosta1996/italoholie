@@ -192,6 +192,7 @@ function Booking({ menu }) {
         <Container>
             <div className="make-contact">
                 <h2>Make an appointment</h2>
+                {/* TODO: CHANGE FOR CONTENTFUL DATA */}
                 <p>{`I'll be back in touch as soon as possible.`}</p>
             </div>
             {messageSent ? (

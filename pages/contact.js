@@ -195,6 +195,7 @@ function Contact({ menu }) {
         <Container>
             <div className="make-contact">
                 <h2>Make contact</h2>
+                {/* TODO: CHANGE FOR CONTENTFUL DATA */}
                 <p>{`For any inquiries feel free to reach out via the form, I'll be back in touch as soon as possible.`}</p>
             </div>
             {messageSent ? (
