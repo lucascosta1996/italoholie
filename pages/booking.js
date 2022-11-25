@@ -2,8 +2,6 @@ import { useForm } from "react-hook-form"
 import { createClient } from 'contentful'
 import styled from 'styled-components'
 import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import { DateTimePicker } from 'react-rainbow-components';
 import { InlineWidget } from 'react-calendly';
 
 import Navbar from '../components/menu/Navbar'
@@ -198,7 +196,7 @@ function Booking({ menu }) {
             {messageSent ? (
                 <FormWrapper>Thank you!</FormWrapper>
             ) : (
-                <FormWrapper onSubmit={handleSubmit(sendEmail)} sendingMessage={sendingMessage} ref={form}>
+                <FormWrapper sendingMessage={sendingMessage} ref={form}>
                     <InlineWidget
                         url="https://calendly.com/italoholie"
                     />
