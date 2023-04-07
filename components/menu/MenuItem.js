@@ -11,6 +11,8 @@ const ListItem = styled.li`
     height: 100vh;
     ${props => props.isMenuOpen && 'flex-grow: 10;'}
     transition: all ease 1s;
+    background-color: #000;
+    color: #fff;
 
     header {
         /* ${props => !props.isMenuOpen && 'display: none;'} */

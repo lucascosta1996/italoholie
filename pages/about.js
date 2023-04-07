@@ -23,8 +23,6 @@ export async function getServerSideProps() {
         content_type: "about"
     })
 
-    console.log(`ABOUT`, about)
-
     return {
       props: {
         menu: mainMenu,
